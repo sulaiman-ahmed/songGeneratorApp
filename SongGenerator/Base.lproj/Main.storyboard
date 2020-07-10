@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SongGenerator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Generator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahS-m7-TPt">
+                                <rect key="frame" x="46" y="93" width="322" height="229"/>
+                                <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="229" id="a6n-Ch-83n"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="322" id="bev-mv-BCb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Rockwell-Regular" family="Rockwell" pointSize="39"/>
+                                <color key="textColor" red="0.96897417306900024" green="0.41091898416976436" blue="0.3519260178767295" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UjA-Yu-wA0">
+                                <rect key="frame" x="123" y="370" width="168" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="aa1-q7-ro1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="displaySong:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="c3V-bu-5Ac"/>
+                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="Pzi-89-NIA"/>
+                                </connections>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uQA-Gd-el0">
+                                <rect key="frame" x="87" y="490" width="240" height="128"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.77160825277795875" green="0.89419116328334058" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="UjA-Yu-wA0" secondAttribute="trailing" symbolic="YES" id="3in-Bn-bPz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uQA-Gd-el0" secondAttribute="bottom" constant="244" id="4B1-U9-G03"/>
+                            <constraint firstItem="UjA-Yu-wA0" firstAttribute="leading" secondItem="ahS-m7-TPt" secondAttribute="trailing" constant="-245" id="DtY-a9-BKF"/>
+                            <constraint firstItem="uQA-Gd-el0" firstAttribute="top" secondItem="UjA-Yu-wA0" secondAttribute="bottom" constant="86" id="LWB-E2-pDa"/>
+                            <constraint firstItem="uQA-Gd-el0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="RHs-U8-Wht"/>
+                            <constraint firstItem="UjA-Yu-wA0" firstAttribute="top" secondItem="ahS-m7-TPt" secondAttribute="bottom" constant="48" id="ZXd-wv-aLj"/>
+                            <constraint firstItem="ahS-m7-TPt" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="cHt-x0-x6A"/>
+                            <constraint firstItem="ahS-m7-TPt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="49" id="dhc-nw-Ea2"/>
+                            <constraint firstItem="UjA-Yu-wA0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="l52-Aj-uUX"/>
+                            <constraint firstItem="uQA-Gd-el0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="qVv-6f-jjK"/>
+                            <constraint firstItem="uQA-Gd-el0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="446" id="ydr-Tu-56D"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="nameField" destination="UjA-Yu-wA0" id="jS8-RY-bbw"/>
+                        <outlet property="songView" destination="uQA-Gd-el0" id="y7y-3y-3xK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
+        </scene>
+    </scenes>
+</document>
